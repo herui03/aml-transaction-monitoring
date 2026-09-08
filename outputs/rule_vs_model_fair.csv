@@ -1,0 +1,3 @@
+basis,positives_in_test,rule_expected_tp_at_K,rule_recall_pct,model_tp_at_K,model_recall_pct,model_over_rule
+all laundering typologies,2837,1.84,0.065,2480,87.42,"1,347x"
+Smurfing only (R-04's own target),263,1.84,0.7,222,84.41,121x

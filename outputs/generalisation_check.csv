@@ -1,0 +1,5 @@
+slice,txns,positives,K,tp_at_K,precision_at_K_pct,recall_at_K_pct,roc_auc,pr_auc
+ALL test,2456064,2837,12600,2480,19.683,87.42,0.9951,0.7982
+senders NEVER seen in train  <- the real generalisation test,549909,11,2821,11,0.39,100.0,0.9998,0.7201
+"senders seen, but never flagged bad in train",1769092,2075,9076,1804,19.877,86.94,0.9941,0.7986
+senders already known-bad in train (memorisable),137063,751,703,563,80.085,74.97,0.9935,0.8207

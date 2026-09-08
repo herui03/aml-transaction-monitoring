@@ -1,0 +1,5 @@
+rule,txn_alerted,txn_tp,txn_labelled,txn_precision_pct,txn_recall_pct,acct_flagged,acct_guilty,acct_tp_lenient,acct_tp_strict,acct_prec_lenient_pct,acct_prec_strict_pct,coincidence_rate_pct
+R-01 structuring (orig params),753526,3,2802,0.0004,0.1071,43086,1933,474,3,1.1001,0.007,99.3671
+R-01 structuring (best-precision params),427259,65,2802,0.0152,2.3198,30221,1933,948,59,3.1369,0.1952,93.7764
+R-03' fan-out (best lift params),1896202,364,766,0.0192,47.5196,18837,244,182,71,0.9662,0.3769,60.989
+R-04 smurfing (best lift params),1986773,407,932,0.0205,43.6695,21057,63,49,41,0.2327,0.1947,16.3265

@@ -1,0 +1,6 @@
+approach,recall_at_capacity_pct
+Rule engine (cannot rank),0.06
+Random ordering,0.42
+Amount-only ranking,2.29
+Logistic regression,10.96
+Gradient-boosted model,87.42

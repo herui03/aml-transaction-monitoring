@@ -1,0 +1,39 @@
+# ── Data: never committed. Rebuilt from source by `make demo`. ──
+# SAML-D is CC-BY-NC-SA-4.0 licensed; redistributing it here would breach the
+# licence and blow past GitHub's 100 MB file limit. It is downloaded on demand.
+data/raw/
+data/processed/
+*.duckdb
+*.duckdb.wal
+
+# ── Derived artefacts (regenerated; too large for git) ──
+outputs/*.npy
+outputs/*.parquet
+outputs/*.pkl
+# Keep the small CSVs — they ARE the evidence cited in docs/
+!outputs/*.csv
+
+# ── Tableau extracts: regenerable via python/export_tableau.py, but small and
+# they ARE the evidence behind the published dashboard — keep them. ──
+*.twb
+*.twbx
+*.hyper
+
+# ── Secrets ──
+# kaggle.json lives in ~/.kaggle/ with mode 600 and is never copied into the repo.
+kaggle.json
+.env
+*.pem
+
+# ── Python ──
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ── macOS ──
+.DS_Store
+
+# Keep the empty data/ skeleton so `make data` has somewhere to land
+!data/raw/.gitkeep
+!data/processed/.gitkeep

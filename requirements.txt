@@ -1,0 +1,9 @@
+# Python 3.9 (system interpreter on the build machine).
+# Install:  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+duckdb==1.4.5
+pandas==2.3.3
+numpy==2.0.2
+scikit-learn==1.6.1
+pyarrow==21.0.0
+matplotlib==3.9.4
+kaggle==1.7.4.5

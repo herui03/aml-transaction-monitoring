@@ -6,6 +6,8 @@ The short version: rule-based monitoring does not fail because the rules are ina
 
 Stack: SQL (DuckDB, window functions), Python (pandas, scikit-learn, SHAP), Tableau.
 
+Dashboard on Tableau Public: [AML transaction monitoring: rules vs a scored model at analyst capacity](https://public.tableau.com/app/profile/herui.dou/viz/AMLTransactionMonitoringRulesvsaScoredModelatAnalystCapacity/Dashboard1). It shows the detection curve at the 12,600-investigation budget, recall at capacity by approach, the calibration check, and the top 200 rows of the alert queue with the SHAP primary driver for each alert.
+
 ## Headline result
 
 Budget: 12,600 investigations over the 84-day test period (10 analysts x 15 alerts per day).
@@ -57,7 +59,7 @@ python/train.py            baselines, logistic regression, gradient boosting, pr
 python/explain_shap.py     SHAP attribution over the alert queue, one reason per alert
 python/calibration_check.py  discrimination vs calibration
 docs/                      five documented mistakes and what they cost
-tableau/                   extracts and a build guide for the dashboard
+tableau/                   extracts and build guide behind the Tableau Public dashboard
 outputs/                   every figure quoted here, as committed CSVs
 ```
 
@@ -159,7 +161,7 @@ Or `make demo` for the whole pipeline.
 
 ## Status
 
-Rules, features, models and validation are complete and reproducible. Outstanding: calibration of the score (challenge 05) and publishing the Tableau workbook (extracts and a build guide are in `tableau/`). The model ranks well enough to be useful as a triage queue; it is not ready to sit behind a score threshold.
+Rules, features, models and validation are complete and reproducible. The Tableau workbook is published ([link](https://public.tableau.com/app/profile/herui.dou/viz/AMLTransactionMonitoringRulesvsaScoredModelatAnalystCapacity/Dashboard1)). Outstanding: calibration of the score (challenge 05). The model ranks well enough to be useful as a triage queue; it is not ready to sit behind a score threshold.
 
 A small browser-based companion, a rule-based monitoring console with alert triage and STR drafting on synthetic data, is in [aml-monitoring-console](https://github.com/herui03/aml-monitoring-console).
 
